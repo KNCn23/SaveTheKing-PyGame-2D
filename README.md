@@ -1,4 +1,4 @@
-# Save the King! — PyGame 2D
+# Save the King — PyGame 2D
 
 A top-down 2D RPG built with Python and Pygame. Escort the King through a dangerous world filled with bandits, locked doors, riddles, and secrets.
 
@@ -6,7 +6,7 @@ A top-down 2D RPG built with Python and Pygame. Escort the King through a danger
 
 ## Gameplay
 
-You play as either a **Knight** (melee) or an **Archer** (ranged). Your goal is to guide the King safely to the castle while surviving ambushes, solving guard riddles, and looting chests along the way.
+Play as either a **Knight** (melee) or an **Archer** (ranged) and guide the King safely to the castle. Survive ambushes, answer guard riddles, and loot chests along the way.
 
 ### Controls
 
@@ -20,41 +20,37 @@ You play as either a **Knight** (melee) or an **Archer** (ranged). Your goal is 
 | `Tab` | Toggle full map |
 | `Esc` | Pause menu |
 
-Controller (Xbox/PS) is also supported.
+Xbox and PlayStation controllers are also supported.
 
 ---
 
 ## Classes
 
 **Knight**
-- 100 Vitality, 20 Attack Power
-- Melee sword swing
-- Higher effective armor
+- 100 HP, 20 Attack — melee sword swing, higher effective armor
 
 **Archer**
-- 70 Vitality, 25 Attack Power
-- Fires projectiles with left click (aim with mouse)
-- Better at keeping distance
+- 70 HP, 25 Attack — projectile attacks aimed with mouse, better at range
 
 ---
 
 ## Features
 
 - 30+ hand-crafted interconnected rooms across forest, town, and dungeon regions
-- Range-based enemy AI — melee bandits close in, archer bandits hold their distance and attack from range
-- Friendly NPC dialogue with randomized reactions based on game state
-- Guard riddle system — answer correctly to open the gate, fail three times and they turn hostile
+- Range-based enemy AI — melee bandits close in, archer bandits hold distance
+- Friendly NPC dialogue with state-aware randomized reactions
+- Guard riddle system — fail three times and the guard turns hostile
 - Merchant trading with gold coins
 - Chest and item system with keys, health items, and armor
 - Fog-of-war minimap that reveals as you explore
-- King companion AI that follows and must be kept alive
+- King companion AI that follows and must survive
 - Save / load system
 
 ---
 
 ## Installation
 
-**Requirements:** Python 3.10+ and Pygame
+Requires Python 3.10+ and Pygame.
 
 ```bash
 pip install pygame
@@ -66,27 +62,21 @@ python main.py
 ## Project Structure
 
 ```
-main.py          — game loop, state machine, input handling
-player.py        — Player, Knight, Archer classes + Projectile
-enemy.py         — Enemy AI (melee / ranged)
-characters.py    — King, Guard, NPC classes
-level.py         — world map, room loading, transitions, minimap data
-ui.py            — HUD, inventory, minimap, big map, dialogue box
-item.py          — Item and Chest classes
-save_system.py   — JSON save / load
-config.py        — screen size, colors, constants
-button_mapping.py — keyboard + controller input abstraction
-assets/          — sprites, tilesets, sounds
+main.py           — game loop, state machine, input handling
+player.py         — Player, Knight, Archer classes and Projectile
+enemy.py          — Enemy AI (melee / ranged)
+characters.py     — King, Guard, NPC classes
+level.py          — world map, room loading, transitions, minimap data
+ui.py             — HUD, inventory, minimap, big map, dialogue box
+item.py           — Item and Chest classes
+save_system.py    — JSON save / load
+config.py         — screen size, colors, constants
+button_mapping.py — keyboard and controller input abstraction
+assets/           — sprites, tilesets, sounds
 ```
-
----
-
-## Screenshots
-
-> *(coming soon)*
 
 ---
 
 ## License
 
-MIT License — feel free to use, modify, and distribute.
+MIT
